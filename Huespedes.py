@@ -1,4 +1,4 @@
-class huespedes:
+class Huespedes:
     def __init__(self,nombre,apellido,dni,idioma,nacionalidad):
         self.__nombre=nombre
         self.__apellido=apellido
