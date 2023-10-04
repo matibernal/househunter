@@ -6,5 +6,8 @@ class Habitacion:
         self.__numero = numero
         Habitacion.habitaciones.append(self)
 
-    def verHabitaciones(self, habitaciones):
-        print("Habitaciones: ", habitaciones)
+    @staticmethod
+    def verHabitaciones():
+        print("Habitaciones: ")
+        for habitacion in Habitacion.habitaciones:
+            print(f"Número: {habitacion.__numero}, Precio: {habitacion.__precio}")

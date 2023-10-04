@@ -20,8 +20,7 @@ while True:
         print("La habitacion fue creada")
 
     elif opciones == 2:
-        # Realizar acción para la opción 2
-        pass
+        Habitacion.verHabitaciones()
     elif opciones == 3:
         # Realizar acción para la opción 3
         pass
