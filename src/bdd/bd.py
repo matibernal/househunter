@@ -48,6 +48,7 @@ class Conexion:
             print("Precio de la habitacion:", habitacion[1])
             print("Capacidad de la habitacion:", habitacion[2])
             print()
+
 ##FIN DE HABITACIONES
     def CerrarConexion(self):
         self.cursor.close()

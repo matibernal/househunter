@@ -3,8 +3,46 @@ from logica.Habitacion import Habitacion
 from logica.Actividades import Actividades
 import sqlite3
 from bdd.bd import Conexion
+import unittest
+
+'''
+class TestHabitacionesDisponibles(unittest.TestCase):
+
+    def setUp(self):
+        self.nombreBD = "test_HouseHunter.db"
+        self.conexion = Conexion(self.nombreBD)
+        self.conexion.crearTablaHabitaciones()
+
+    def tearDown(self):
+        self.conexion.CerrarConexion()
+    def test_habitaciones_disponibles(self):
+
+        precio = 200
+        capacidad = 2
+        self.conexion.insertarHabitacion(precio, capacidad)
+
+        habitaciones = self.conexion.MostrarHabitaciones()
+
+        self.assertTrue(len(habitaciones) > 0)
 
 
+    def test_editarHabitaciones(self):
+
+        precio = 300
+        capacidad = 1
+        self.conexion.insertarHabitacion(precio,capacidad)
+
+        precioeditar= 400
+        capacidadeditar= 3
+        id_habitacion= 1
+
+        self.conexion.EditarHabitacion( id_habitacion, precioeditar,capacidadeditar)
+
+        habitacion_editada = self.conexion.MostrarHabitaciones()[0]
+
+        self.assertEqual(habitacion_editada[1], precioeditar)
+        self.assertEqual(habitacion_editada[2], capacidadeditar)
+'''
 if __name__ == "__main__":
     print("Bienvenido al sistema")
     nombreBD = "houseHounter.db"
@@ -12,6 +50,7 @@ if __name__ == "__main__":
     conexion.crearTablaHabitaciones()
     error = 1
     opciones = 0
+    unittest.main()
     while error!= 0:
         try:
             opciones = int(input('''¿Que desea hacer?
@@ -84,6 +123,7 @@ if __name__ == "__main__":
             pass
         elif opciones == 9:
             print("Usted ha salido del sistema, muchas gracias")
+            error=0
             conexion.CerrarConexion()
         else:
             print("La opcion ingresada no es valida")
